@@ -14,6 +14,7 @@ bal.tab(covs0, treat = lalonde$treat, weights = lalonde$att.weights,
 #Import the dataframe
 
 #The user puts the name of the key identity variables into the form associated with each column
+#the user labels each key identity variable with data type - numeric (age), factor (gender, ethnicity), string (language)
 
 #The user puts the expected population proportions for each key identity variables into the form associated with each identity variable
 
