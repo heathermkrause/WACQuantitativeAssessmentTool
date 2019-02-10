@@ -1,3 +1,5 @@
+library("cobalt")
+
 data("lalonde", package = "cobalt") #If not yet loaded
 covs0 <- subset(lalonde, select = -c(treat, re78, nodegree, married))
 
