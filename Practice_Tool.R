@@ -15,6 +15,8 @@ bal.tab(covs0, treat = lalonde$treat, weights = lalonde$att.weights,
 
 #The user puts the name of the key identity variables into the form associated with each column
 
+#The user puts the expected population proportions for each key identity variables into the form associated with each identity variable
+
 #The user is asked whether there is a treatment/control variable. If so the user put the name of that variable into the form and tells which column it is located in
 
 #The algorithm assesses the balance of representation in each of the identity variables
