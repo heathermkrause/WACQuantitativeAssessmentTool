@@ -39,3 +39,4 @@ cbind(freq=table(y), percentage=prop.table(table(y))*100)
 
 # calculate skewness for each variable
 skew <- apply(PimaIndiansDiabetes[,1:8], 2, skewness)
+#The further the distribution of the skew value from zero, the larger the skew to the left (negative skew value) or right (positive skew value)
