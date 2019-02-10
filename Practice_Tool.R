@@ -36,3 +36,6 @@ data(PimaIndiansDiabetes)
 # distribution of class variable
 y <- PimaIndiansDiabetes$diabetes
 cbind(freq=table(y), percentage=prop.table(table(y))*100)
+
+# calculate skewness for each variable
+skew <- apply(PimaIndiansDiabetes[,1:8], 2, skewness)
