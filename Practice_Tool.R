@@ -25,3 +25,14 @@ bal.tab(covs0, treat = lalonde$treat, weights = lalonde$att.weights,
 #The algorithm assesses the balance of the treatment/control in each of the identity variables
 
 #The algorithm assess whether there is much more missing data associated outcome variable and one of the key identity variables
+
+
+
+#calculate proportion for each class
+# load the libraries
+library(mlbench)
+# load the dataset
+data(PimaIndiansDiabetes)
+# distribution of class variable
+y <- PimaIndiansDiabetes$diabetes
+cbind(freq=table(y), percentage=prop.table(table(y))*100)
