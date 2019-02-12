@@ -27,3 +27,5 @@ KeyVar1 <- dd[1]
 
 countKeyVar1.1 <- length(which(KeyVar1 == keyvar1codes[1])) 
 countKeyVar1.2 <- length(which(KeyVar1 == keyvar1codes[2]))
+
+chisq.test(c(60,40), p = c(.5,.5))
