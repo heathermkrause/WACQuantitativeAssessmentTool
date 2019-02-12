@@ -45,3 +45,28 @@ skew <- apply(PimaIndiansDiabetes[,1:8], 2, skewness)
 #The further the distribution of the skew value from zero, the larger the skew to the left (negative skew value) or right (positive skew value)
 
 prop.test
+
+prop.test(x, n, p = NULL,
+          alternative = c("two.sided", "less", "greater"),
+          conf.level = 0.95, correct = TRUE)
+
+smokers  <- c( 83, 90, 129, 70 )
+patients <- c( 86, 93, 136, 82 )
+prop.test(smokers, patients)
+
+heads <- rbinom(1, size = 100, prob = .5)
+prop.test(heads, 100)          # continuity correction TRUE by default
+prop.test(heads, 100, correct = FALSE)
+
+sample <- c()
+
+sexsmoke<-matrix(c(70,120,65,140),ncol=2,byrow=T)
+rownames(sexsmoke)<-c("male","female")
+colnames(sexsmoke)<-c("population","sample")
+prop.test(sexsmoke)
+
+
+sample: ethnicity - 3 groups - 100 total - group 1 = 10, group 2 = 40, group 3 = 50
+population ethnicity - group 1 20%, group 2 20% group 3 60%
+
+prop.text()
