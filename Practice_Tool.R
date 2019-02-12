@@ -20,11 +20,14 @@ bal.tab(covs0, treat = lalonde$treat, weights = lalonde$att.weights,
 
 #The user is asked whether there is a treatment/control variable. If so the user put the name of that variable into the form and tells which column it is located in
 
-#The algorithm assesses the balance of representation in each of the identity variables
+#The algorithm assesses the balance of representation in each of the identity variables relative to population variable
 
 #The algorithm assesses the balance of the treatment/control in each of the identity variables
 
 #The algorithm assess whether there is much more missing data associated outcome variable and one of the key identity variables
+
+#null hypothesis of prop = known proportion
+t.test 
 
 
 
@@ -40,3 +43,5 @@ cbind(freq=table(y), percentage=prop.table(table(y))*100)
 # calculate skewness for each variable
 skew <- apply(PimaIndiansDiabetes[,1:8], 2, skewness)
 #The further the distribution of the skew value from zero, the larger the skew to the left (negative skew value) or right (positive skew value)
+
+prop.test
