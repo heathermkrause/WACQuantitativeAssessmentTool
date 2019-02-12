@@ -28,6 +28,14 @@ KeyVar1 <- dd[1]
 countKeyVar1.1 <- length(which(KeyVar1 == keyvar1codes[1])) 
 countKeyVar1.2 <- length(which(KeyVar1 == keyvar1codes[2]))
 
-z <- chisq.test(c(countKeyVar1.1,countKeyVar1.2), p = keyvar1pr)
-unclass(z) 
-z$p.value
+keyvar1z <- chisq.test(c(countKeyVar1.1,countKeyVar1.2), p = keyvar1pr)
+unclass(keyvar1z) 
+keyvar1z$p.value
+
+FinalOutputkeyvar1z <- "yellow"
+FinalOutputkeyvar1z[keyvar1z$p.value > .05] <- "green"
+FinalOutputkeyvar1z[keyvar1z$p.value > .001 &keyvar1z$p.value > .0499] <- "yellow"
+FinalOutputkeyvar1z[keyvar1z$p.value < .001] <- "red"
+
+#The webtools should ingest the "FinalOutputkeyvarXz" for each key identity variable and show visually to the user whether the outcome is red, yellow, or green.
+#Red means sample is biased. Yellow means sample should be checked. Green means sample looks good
