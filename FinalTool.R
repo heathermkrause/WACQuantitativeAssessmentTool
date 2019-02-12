@@ -24,5 +24,6 @@ keyvar1codes <- c(1,2)
 keyvar1pr <- c(.5,.5)
   
 KeyVar1 <- dd[1]
-countKeyVar1.1 <- length(which(KeyVar1 == 1)) 
-countKeyVar1.2 <- length(which(KeyVar1 == 2))
+
+countKeyVar1.1 <- length(which(KeyVar1 == keyvar1codes[1])) 
+countKeyVar1.2 <- length(which(KeyVar1 == keyvar1codes[2]))
