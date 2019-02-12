@@ -6,6 +6,12 @@
 #' use:
 #' 
 chisq.test(c(60,40), p = c(.5,.5))
+
+fl <- c(.5,.5)
+chisq.test(c(60,40), p = fl)
+
+pr <- c(.2,.8)
+chisq.test(c(60,40), p = pr)
 #'
 #' Use the p-value as a measure of 'surprise'
 #' 
